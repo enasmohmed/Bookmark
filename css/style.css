@@ -1,0 +1,139 @@
+/****** Start Global syles ******/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PT Sans Caption' sans-serif;
+    background-color: rgb(247, 236, 222);
+}
+
+
+/* Fonts Body */
+@font-face{
+    font-family: 'PT Sans Caption'; 
+    src: url('../fonts/PT_Sans_Caption-Regular.ttf') format('truetype'); 
+}
+
+/* Title Fonts  */
+@font-face {
+    font-family: 'Pacifico';
+    src: url('../fonts/Pacifico-Regular.ttf') format('truetype');
+}
+
+
+/* Title Fonts  */
+@font-face {
+    font-family: 'Righteous';
+    src: url('../fonts/Righteous-Regular.ttf') format('truetype');
+}
+
+
+/****** End Global syles ******/
+
+
+
+/****** Start Bookmarker ******/
+.bookmark-body{
+    border-width: 2px 0px;
+    border-style: dotted;
+    border-color: #333;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+}
+
+.bookmark-body h3{
+    font-family: 'Righteous', cursive;
+    font-size: 25px;
+    font-weight: 500;
+    background-image: linear-gradient(to right, rgb(60, 165, 92), rgb(181, 172, 73));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bookmarker .title {
+    position: relative;
+    display: inline-block; 
+    font-size: 3.3rem;
+    font-family: 'Pacifico', cursive;
+    color: #000;
+    z-index: 1;
+}
+
+.bookmarker .title::before {
+    content: ''; 
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    height: 20px;
+    background-color: #f1af44;
+    z-index: -1;
+    transition: height 0.3s ease;
+}
+
+.bookmarker .title:hover::before {
+    height: 40px; 
+}
+
+
+.form-label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem; 
+    color: #333; 
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.55rem;
+    font-size: 1rem;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); 
+    transition: border-color 0.3s, box-shadow 0.3s; 
+}
+
+.form-control:focus {
+    border-color: #f1af44; 
+    box-shadow: 0 0 5px rgba(246, 192, 67, 0.5); 
+    outline: none;
+}
+
+.submit {
+    background-color: #d1512d;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 160px;
+    height: 40px; 
+    transition: background-color 0.3s ease;
+    min-width: 160px; 
+    min-height: 40px; 
+}
+
+.submit:hover {
+    background-color: #d3421a; 
+}
+
+.btn-success{
+    background-color: #9eb23b;
+    color: white;
+    border-color: rgb(181, 172, 73);
+    transition: background-color 0.3s ease;
+}
+
+.btn-success:hover{
+    background-color: rgb(165, 152, 57);
+    border-color: rgb(165, 152, 57);
+}
+/****** End Bookmarker ******/

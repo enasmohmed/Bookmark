@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <!-- =========== START CORE FONT ============= -->
+    <!-- ===== favicon ===== -->
+    <link rel="icon" href="./images/bookmark.png" />
+    <!-- =========== END CORE FONT ============= -->
+
+    <!-- ========== START FONTAWESOMS LIBRAIRY ========= -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- ========== END FONTAWESOMS LIBRAIRY ========= -->
+
+    <!-- ========= START BOOTSTRAP CSS ========= -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- ========= END BOOTSTRAP CSS ========= -->
+
+    <!-- ========== START MAIN CSS ========= -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- ========== END MAIN CSS ========= -->
+</head>
+
+<body>
+
+    <!--& ========== Start Bookmarker =========== -->
+    <div class="bookmarker" id="bookmarker">
+        <div class="container">
+            <div class="main-text d-flex justify-content-center align-items-center">
+                <h1 class="m-5 title">Bookmarker</h1>
+            </div>
+
+            <div class="bookmark-body text-center">
+                <h3 class="mb-5 text-center">
+                    <i class="fa fa-bookmark"></i> 
+                        Bookmark your favorite sites 
+                    <i class="fa fa-bookmark"></i>
+                </h3>
+
+                <div class="form-group mb-3">
+                    <label for="site-name" class="form-label">
+                        <i class="fa-solid fa-book-bookmark"></i> Site Name
+                    </label>
+                    <input type="text" id="site-name" class="form-control" placeholder="Bookmark Name">
+                </div>
+                
+                <div class="form-group mb-3">
+                    <label for="site-url" class="form-label">
+                        <i class="fa-solid fa-link"></i> Site URL
+                    </label>
+                    <input type="url" id="site-url" class="form-control" placeholder="Website URL">
+                </div>
+                
+                <button id="submit" type="submit" class="btn btn-primary submit">Submit</button>
+                <button onclick="updateBookmark()" id="update" type="submit" class="btn btn-warning m-auto submit d-none">Update</button>
+                
+                <div id="submitError" class="alert alert-danger d-none">
+                    Please enter the site name and link.
+                </div>
+
+                <div id="duplicateError" class="alert alert-danger d-none">
+                    This bookmark name already exists!
+                </div>
+
+                <div id="urlError" class="alert alert-danger d-none">
+                    Please enter a valid URL!
+                </div>
+            </div>
+
+            <!-- Search Site Name Or Site URL -->
+            <div class="container">
+                <div class="w-75 mx-auto">
+                    <h2 class="text-primary text-center my-3">Search By Site Name</h2>
+                    <!-- Search Bookmark -->
+                    <div class="form-floating mb-3">
+                        <input oninput="searchOfBookmarks()" type="search" class="form-control" id="search-Bookmark" placeholder="Search Bookmark">
+                        <label for="searchBookmark">Search Of Bookmark</label>
+                    </div>
+        
+        
+                </div>
+            </div>
+
+            <!-- Table of save website -->
+
+            <table id="table" class="table table-bordered text-center mt-4">
+                <thead>
+                    <tr>
+                        <th scope="col">index</th>
+                        <th scope="col">Website Name</th>
+                        <th scope="col">Visit</th>
+                        <th scope="col">Update</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                
+                </tbody>
+                <!-- <button onclick="clearAllBookmarks()" class="btn btn-danger">Clear All Bookmarks</button> -->
+
+            </table>
+
+        </div>
+    </div>
+
+    <!--& ========== End Bookmarker =========== -->
+
+
+    <!-- ========= Start BOOTSTRAP JS ========== -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- ========= END BOOTSTRAP JS ========== -->
+
+    <!-- ======== Start MAIN JS ========= -->
+    <script src="./js/main.js"></script>
+    <!-- ======== End MAIN JS ========= -->
+
+</body>
+
+</html>
